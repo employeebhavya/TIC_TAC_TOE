@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900 min-h-screen text-gray-900 dark:text-white;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/60 dark:bg-black/60 border border-white/50 dark:border-white/20 rounded-2xl shadow-2xl;
+  }
+
+  .glass-button {
+    @apply backdrop-blur-xl bg-white/50 dark:bg-black/50 border border-white/60 dark:border-white/30 rounded-xl shadow-lg hover:bg-white/70 dark:hover:bg-black/70 transition-all duration-300 text-gray-800 dark:text-white;
+  }
+
+  .gradient-border {
+    @apply bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-[1px] rounded-2xl;
+  }
+
+  .cell-hover {
+    @apply hover:bg-white/50 dark:hover:bg-black/50 hover:scale-105 transition-all duration-200;
+  }
+
+  /* Enhanced text visibility */
+  .text-enhanced {
+    @apply text-gray-900 dark:text-white font-medium;
+  }
+
+  .text-muted {
+    @apply text-gray-700 dark:text-gray-200;
+  }
+
+  .text-subtle {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+}
